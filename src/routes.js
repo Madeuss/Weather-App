@@ -1,15 +1,15 @@
 import React from 'react';
-import { BrowserRoute, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
-// import Component from './components/...';
+import LandingPage from './components/LandingPage';
 
 export default function Routes() {
   return (
-    <BrowserRoute>
+    <BrowserRouter>
         <Switch>
-            <Route path="/" exact component={{/*component*/}} />
+            <Route path="/" exact component={LandingPage} />
         </Switch>
-    </BrowserRoute>
+    </BrowserRouter>
   );
 }
