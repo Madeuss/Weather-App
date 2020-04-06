@@ -17,8 +17,7 @@
 <br>
 
 <p align="center">
-  <img alt="Frontend" src=".github/desktop.png" width="50%" float="left">
-  <img alt="Frontend" src=".github/pokedex.png" width="16%">
+  <img alt="Frontend" src=".github/readme-pc-image.png" width="100%"/>
 </p>
 
 ## :rocket: Tecnologias
