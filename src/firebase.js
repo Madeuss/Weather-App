@@ -7,8 +7,8 @@ const prodConfig = {
     projectId: "weatherapp-559f6",
     storageBucket: "weatherapp-559f6.appspot.com",
     messagingSenderId: "36840278510",
-    appId: "1:36840278510:web:2864ff71fe702b1f24a6ff",
-    measurementId: "G-4G6600H4MX"
+    appId: "1:36840278510:web:ad73630e68a23b0f24a6ff",
+    measurementId: "G-8NJBGFEL19"
   };
 
   const devConfig = {
@@ -18,8 +18,8 @@ const prodConfig = {
     projectId: "weatherapp-559f6",
     storageBucket: "weatherapp-559f6.appspot.com",
     messagingSenderId: "36840278510",
-    appId: "1:36840278510:web:2864ff71fe702b1f24a6ff",
-    measurementId: "G-4G6600H4MX"
+    appId: "1:36840278510:web:ad73630e68a23b0f24a6ff",
+    measurementId: "G-8NJBGFEL19"
   };
 
   const config = process.env.NODE_ENV === 'production'
