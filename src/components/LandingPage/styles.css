@@ -1,41 +1,165 @@
 .weather-container {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    border: 2px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20%;
+    position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
 }
 
-.form-section {
-    height: auto;
+.weather-container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("../../assets/bg2.jpeg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+
+.form-section{
+    max-width: 1300px;
+    height: 80vh;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("../../assets/bg2.jpeg") no-repeat center;
+	background-size: cover;
+    height: 100%;
+}
+
+.right{
+    background-color: rgb(9, 7, 31);
+    height: 100%;
+    padding: 25px 60px;
 }
 
 .inputs {
     display: flex;
+    color: snow;
 }
 
 .form-row {
-    margin-left: 20px;
-}
-
-.input-col-2 {
-    width: 80px;
+    margin-left: 30px;
+    display: flex;
 }
 
 #city-name {
-    width: 200px;
+    width: 150px;
+    margin-top: 8px;
     text-transform: capitalize;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid orangered;
+    border-radius: 0;
+    font-size: 1.3em;
+    color: rgb(201, 192, 192);
+}
+
+#city-name:focus {
+    outline: 0;
+    border-bottom: 2px solid white;
+    transition: ease-in-out .5s;
 }
 
 #country-id {
-    width: 80px;
+    width: 60px;
+    text-align: center;
+    margin-top: 8px;
     text-transform: lowercase;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid orangered;
+    border-radius: 0;
+    font-size: 1.3em;
+    color: rgb(201, 192, 192);
+}
+
+#country-id:focus {
+    outline: 0;
+    border-bottom: 2px solid white;
+    transition: ease-in-out .5s;
 }
 
 Button {
     margin-left: 20px;
     height: 48px;
+    width: 95px;
+}
+
+Button:focus {
+    border: none;
+}
+
+.weather-data {
+    display: grid;
+    padding-top: 60px;
+    height: 200px;
+    color: rgb(201, 168, 201);
+}
+
+.data-group {
+    display: flex;
+    justify-content:center;
+    padding: 5px;
+}
+
+.data-group p {
+    margin-left: 5px;
+}
+
+.city_country {
+    margin-left: 25%;
+    width: 50%;
+    color: #fff;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 880px){
+	.form-section{
+		grid-template-columns: 1fr;
+    }
+    
+	.left{
+		height: 200px;
+    }
+
+    .right{
+        background-color: rgb(9, 7, 31);
+        height: 100%;
+        padding: 25px 2px;
+    }
+
+    #city-name{
+        width: 95px;
+        font-size: medium;
+    }
+
+    #country-id{
+        width: 40px;
+        font-size: medium;
+    }
+
+    Button {
+        margin: 5px;
+        width: 70px;
+        height: 35px;
+    }
 }
