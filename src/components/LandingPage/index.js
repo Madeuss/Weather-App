@@ -46,7 +46,7 @@ return (
                 <aside className="right">
                     <form className="inputs" onSubmit={handleConsultWeather}>
                         <Form.Row className="form-row">
-                            <Form.Label column="lg" lg={0}>
+                            <Form.Label column="lg" lg={0} className="form-label">
                                 City:
                             </Form.Label>
                             <Col id="input-col-1" className="input-col" >
@@ -54,7 +54,7 @@ return (
                             </Col>
                         </Form.Row>
                         <Form.Row className="form-row">
-                            <Form.Label column="lg" lg={0}>
+                            <Form.Label column="lg" lg={0} className="form-label">
                                 Country ID:
                             </Form.Label>
                             <Col id="input-col-2" className="input-col" >

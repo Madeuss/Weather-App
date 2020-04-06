@@ -102,9 +102,6 @@ Button {
     width: 95px;
 }
 
-Button:focus {
-    border: none;
-}
 
 .weather-data {
     display: grid;
@@ -130,6 +127,7 @@ Button:focus {
     border-bottom: 1px solid white;
     margin-bottom: 20px;
 }
+
 
 
 @media screen and (max-width: 880px){
@@ -161,5 +159,67 @@ Button:focus {
         margin: 5px;
         width: 70px;
         height: 35px;
+    }
+}
+
+@media screen and (max-width: 878px){
+    .weather-data h1, .weather-data h2, .weather-data p, .weather-data span{
+        font-size: 1.2em;
+    }
+
+    .right {
+        height: 140%;
+    }
+
+    Button {
+        width: auto;
+        height: 35px;
+    }
+
+    #city-name{
+        margin-top: 12px;
+        width: 65px;
+        font-size: .8em;
+    }
+
+    #country-id{
+        width: 40px;
+        font-size: .8em;
+        margin-top: 12px;
+    }
+
+    .form-label{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .weather-data h1, .weather-data h2, .weather-data p, .weather-data span{
+        font-size: 1.2em;
+    }
+
+    .right {
+        height: 140%;
+    }
+
+    Button {
+        width: auto;
+        height: 35px;
+    }
+
+    #city-name{
+        margin-top: 1px;
+        width: 65px;
+        font-size: .8em;
+    }
+
+    #country-id{
+        width: 40px;
+        font-size: .8em;
+        margin-top: 1px;
+    }
+
+    .form-label{
+        font-size: .7em;
     }
 }
