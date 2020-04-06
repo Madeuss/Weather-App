@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap');
 .weather-container {
     position: relative;
 	width: 100%;
@@ -22,37 +23,49 @@
 }
 
 .form-section{
-    max-width: 1300px;
-    height: 80vh;
+    width: 1050px;
+    height: 83vh;
 	display: grid;
 	grid-template-columns: 2fr 3fr;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	background-color: #fff;
-	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
 .left{
-	background: url("../../assets/bg2.jpeg") no-repeat center;
 	background-size: cover;
     height: 100%;
+    width: 100%;
+}
+.carousel .carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel .carousel-item img{
+    position: relative;
+    height: 83vh;
+    width: 100%;
 }
 
 .right{
     background-color: rgb(9, 7, 31);
     height: 100%;
-    padding: 25px 60px;
+    padding: 25px 10px 0 50px;
+    width: 100%;
 }
 
 .inputs {
     display: flex;
     color: snow;
+    width: 100%;
 }
 
 .form-row {
-    margin-left: 30px;
     display: flex;
+    margin-left: 15px;
 }
 
 #city-name {
@@ -63,7 +76,7 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid orangered;
+    border-bottom: 1px solid #ff4500;
     border-radius: 0;
     font-size: 1.3em;
     color: rgb(201, 192, 192);
@@ -72,7 +85,7 @@
 #city-name:focus {
     outline: 0;
     border-bottom: 2px solid white;
-    transition: ease-in-out .5s;
+    transition: linear .5s;
 }
 
 #country-id {
@@ -84,7 +97,7 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid orangered;
+    border-bottom: 1px solid #ff4500;
     border-radius: 0;
     font-size: 1.3em;
     color: rgb(201, 192, 192);
@@ -96,18 +109,25 @@
     transition: ease-in-out .5s;
 }
 
-Button {
-    margin-left: 20px;
+.btn-consult {
+    outline: 0;
+    border: none;
+    font-family: 'Baloo Paaji 2', cursive ;
+    font-size: 1.1em;
+    color: snow;
+    border-radius: 3px;
+    margin-left: 30px;
+    background-color: orangered;
     height: 48px;
     width: 95px;
 }
 
-
 .weather-data {
     display: grid;
-    padding-top: 60px;
+    justify-items: center;
+    padding-top: 10px;
     height: 200px;
-    color: rgb(201, 168, 201);
+    color: rgb(255, 255, 255);
 }
 
 .data-group {
@@ -121,28 +141,65 @@ Button {
 }
 
 .city_country {
-    margin-left: 25%;
     width: 50%;
+    margin: 0 auto;
     color: #fff;
     border-bottom: 1px solid white;
     margin-bottom: 20px;
 }
 
+/*Media querys*/
+@media screen and (max-width: 1024px){
 
+    .form-section {
+        margin-top: -10%;
+        height: 80vh;
+    }
 
-@media screen and (max-width: 880px){
+    .right {
+        padding-top: 100px;
+    }
+
+    .inputs {
+        margin-left: -5%;
+    }
+
+    #city-name{
+        width: 100px;
+        font-size: medium;
+    }
+
+    #country-id{
+        width: 40px;
+        font-size: medium;
+    }
+
+    .btn-consult {
+        font-size: 1em;
+        margin: 5px 0 0 20px;
+        width: 70px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 720px){
 	.form-section{
-		grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        width: 200px;
     }
     
-	.left{
-		height: 200px;
+	.carousel .carousel-item img{
+        height: 250px;
     }
 
     .right{
         background-color: rgb(9, 7, 31);
-        height: 100%;
-        padding: 25px 2px;
+        height: 120vh;
+        padding-top: 100px;
+    }
+
+    .inputs {
+        margin-left: 10%;
     }
 
     #city-name{
@@ -155,71 +212,92 @@ Button {
         font-size: medium;
     }
 
-    Button {
-        margin: 5px;
+    .btn-consult {
+        font-size: 1em;
+        margin: 5px 0 0 20px;
         width: 70px;
         height: 35px;
     }
 }
 
-@media screen and (max-width: 878px){
-    .weather-data h1, .weather-data h2, .weather-data p, .weather-data span{
-        font-size: 1.2em;
+@media screen and (max-width: 600px){
+
+    .form-section{
+       margin-top: -110px;
+       height: 95vh;
     }
 
     .right {
-        height: 140%;
+        height: 100vh;
+        padding: 30px;
     }
 
-    Button {
+    .inputs {
+        margin-left: 0px;
+        width: 320px;
+    }
+
+    .btn-consult {
+        margin-top: 1px;
         width: auto;
-        height: 35px;
+        height: 32px;
+    }
+
+    .form-row {
+        width: 230px;
+        margin-left: -10px;
     }
 
     #city-name{
-        margin-top: 12px;
-        width: 65px;
-        font-size: .8em;
+        width: 70px;
+        font-size: .9em;
+        margin-top: 10px;
+        margin-left: -20px;
     }
 
     #country-id{
-        width: 40px;
-        font-size: .8em;
-        margin-top: 12px;
+        width: 30px;
+        font-size: .9em;
+        margin-left: -10px;
     }
 
     .form-label{
         font-size: 1em;
     }
+
+    .data-group p, .data-group span  {
+        font-size: 1em;
+    }
+
+    .weather-data h2, .weather-data h1 {
+        font-size: 1.3em;
+    }
+
+    .weather-data p{
+        font-size: 1em;
+    }
 }
 
-@media screen and (max-width: 600px){
-    .weather-data h1, .weather-data h2, .weather-data p, .weather-data span{
-        font-size: 1.2em;
+@media screen and (max-width: 320px){
+    .inputs {
+        margin-left: 30px;
     }
 
-    .right {
-        height: 140%;
+    .data-group p, .data-group span  {
+        font-size: 1em;
     }
 
-    Button {
-        width: auto;
-        height: 35px;
+    .weather-data h2, .weather-data h1 {
+        font-size: 1.3em;
     }
 
-    #city-name{
-        margin-top: 1px;
-        width: 65px;
-        font-size: .8em;
+    .weather-data p{
+        font-size: 1em;
     }
+}
 
-    #country-id{
-        width: 40px;
-        font-size: .8em;
-        margin-top: 1px;
-    }
-
-    .form-label{
-        font-size: .7em;
+@media screen and (max-width: 320px){
+    .form-section {
+        padding-left: -100px;
     }
 }
