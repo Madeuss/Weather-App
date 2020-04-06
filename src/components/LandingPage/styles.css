@@ -1,0 +1,41 @@
+.weather-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20%;
+}
+
+.form-section {
+    height: auto;
+}
+
+.inputs {
+    display: flex;
+}
+
+.form-row {
+    margin-left: 20px;
+}
+
+.input-col-2 {
+    width: 80px;
+}
+
+#city-name {
+    width: 200px;
+    text-transform: capitalize;
+}
+
+#country-id {
+    width: 80px;
+    text-transform: lowercase;
+}
+
+Button {
+    margin-left: 20px;
+    height: 48px;
+}
