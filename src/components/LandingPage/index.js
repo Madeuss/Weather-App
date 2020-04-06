@@ -125,15 +125,17 @@ return (
                     </form>
 
                     <div className="weather-data">
-                        {/* Weather Icon */}
-                        { weather.weather ? (
-                            weather.weather.map(w => 
-                            <>
-                                 <img src={`http://openweathermap.org/img/wn/${w.icon}@2x.png`} alt="weather-icon" />
-                            </>
-                            )) : (
-                            <div></div> 
-                        )}
+                        <div className="data-group weather-icon">
+                            {/* Weather Icon */}
+                            { weather.weather ? (
+                                weather.weather.map(w => 
+                                <>
+                                    <img src={`http://openweathermap.org/img/wn/${w.icon}@2x.png`} alt="weather-icon" />
+                                </>
+                                )) : (
+                                <div></div> 
+                            )}
+                        </div>
 
                         {/* City - Country */}
                         <div className="data-group city_country">
