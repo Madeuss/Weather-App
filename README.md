@@ -44,7 +44,7 @@
 - Execute 'npm start' ou 'yarn start' no terminal
 - Ou clique no link abaixo se deseja apenas visualizar a aplicação :smile:
   
-:point_down:**Link da aplicação hospedada no Firebase*** :point_down:
+:point_down:**Link da aplicação hospedada no Firebase** :point_down:
 
  [Weather App](https://weatherapp-559f6.firebaseapp.com/)
 
