@@ -29,6 +29,7 @@ export default function LandingPage() {
     const [country, setCountry] = useState('')
     const [id, setID] = useState('')
     const [weather, setWeather] = useState([])
+    const [dateTime, setDateTime] = useState('')
 
    async function handleConsultWeather(e) {
         e.preventDefault();
@@ -44,8 +45,13 @@ export default function LandingPage() {
                     units: 'metric'
                 }
             }).then(response => {
-                console.log(response.data)
                 setWeather(response.data)
+
+                var epoch = Math.floor(new Date().getTime()/1000.0)
+                var timezone = response.data.timezone
+                var localTime = ((epoch + timezone)*1000)
+                var date = new Date(localTime).toGMTString()
+                setDateTime(date.slice(0, 22));
             })
         }
         catch (err) {
@@ -129,21 +135,21 @@ return (
                             {/* Weather Icon */}
                             { weather.weather ? (
                                 weather.weather.map(w => 
-                                <>
+                                <div key={w.id}>
                                     <img src={`http://openweathermap.org/img/wn/${w.icon}@2x.png`} alt="weather-icon" />
-                                </>
+                                </div>
                                 )) : (
                                 <div></div> 
                             )}
                         </div>
-
+                                <p id="datetime">{dateTime}</p>
                         {/* City - Country */}
                         <div className="data-group city_country">
                             <h2> {weather.name}</h2>
-                            { weather.sys? (
-                                <>
+                            { weather.sys ? (
+                                <div key={weather.id}>
                                     <h2>, {weather.sys.country}</h2>
-                                </>
+                                </div>
                                 ) : (
                                 <div></div> 
                             )} 
@@ -152,10 +158,10 @@ return (
                         {/* Main info and Weather Description */}
                         { weather.weather ? (
                             weather.weather.map(w => 
-                            <>
+                            <div key={w.id}>
                                 <h1>{w.main}</h1>
                                 <p>{w.description}</p>
-                            </>
+                            </div>
                             )) : (
                             <div></div> 
                         )}
@@ -163,13 +169,13 @@ return (
 
                         {/* Temp and Humidity */}
                         { weather.main ? (
-                            <>
-                                <h2>{weather.main.temp} ºC</h2>
+                            <div key={weather.main}>
+                                <h2 id="temp">{weather.main.temp} ºC</h2>
                                 <div className="data-group">
                                     <span>Humidity: </span>
                                     <p>{weather.main.humidity}%</p>
                                 </div>
-                            </>
+                            </div>
                             ) : (
                             <div></div> 
                         )}  

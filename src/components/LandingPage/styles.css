@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
 .weather-container {
     position: relative;
 	width: 100%;
@@ -6,7 +8,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 100px;
+	padding: 10px 100px;
 }
 
 .weather-container:after{
@@ -24,7 +26,7 @@
 
 .form-section{
     width: 1050px;
-    height: 83vh;
+    height: 85vh;
 	display: grid;
 	grid-template-columns: 2fr 3fr;
 	justify-content: center;
@@ -46,7 +48,7 @@
 
 .carousel .carousel-item img{
     position: relative;
-    height: 83vh;
+    height: 85vh;
     width: 100%;
 }
 
@@ -146,6 +148,18 @@
     color: #fff;
     border-bottom: 1px solid white;
     margin-bottom: 20px;
+}
+
+#temp {
+    color: #ff4500;
+    font-size: 2.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#datetime {
+    font-family: 'Poppins', sans-serif;
+    font-style: none !important;
+    font-size: .85em; 
 }
 
 /*Media querys*/
